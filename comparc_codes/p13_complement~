@@ -1,0 +1,7 @@
+;<2's complement and 1's complement of an 8 bit no>
+LDA 4000
+CMA
+STA 4001
+ADI 1
+STA 4002
+HLT

@@ -1,0 +1,25 @@
+
+;conversion of a binary number to its ASCII equivalent
+
+LDA 3000
+CALL ASCII ;(call function)
+STA 3002 
+LDA 3000
+RLC ;(Rotate left Accumulator)
+RLC
+RLC
+RLC
+CALL ASCII
+STA 3003
+HLT
+
+ASCII: ANI 0FH ;(ANd Immediate with Accumulator=>takes AND with 0FH)
+CPI 0AH ;(ComPare Immediate with Accumulator=>compare with 10)
+JNC LOOP ;(jump if no carry)
+ADI 30H ;(“ADd Immediate to Accumulator=> add 48)
+RET ;(end of sub routine)
+LOOP: ADI 37H ;(“ADd Immediate to Accumulator=> add 55)
+RET ;(end of subroutine)
+
+
+

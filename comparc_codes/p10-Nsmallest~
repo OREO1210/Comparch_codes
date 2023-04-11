@@ -1,0 +1,18 @@
+
+;<Find the smallest of n numbers>
+
+LXI H,3001
+MOV C,M
+INX H
+MOV B,M
+DCR C
+LOOP: INX H
+MOV A,M
+CMP B
+JNC SKIP
+MOV B,A
+SKIP: DCR C
+JNZ LOOP
+LXI H,3000
+MOV M,B
+HLT

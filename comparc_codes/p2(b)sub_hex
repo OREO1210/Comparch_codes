@@ -1,0 +1,8 @@
+
+;<Program title>
+
+MVI B,05H
+MOV A,B
+MVI D,02H
+SUB D
+HLT

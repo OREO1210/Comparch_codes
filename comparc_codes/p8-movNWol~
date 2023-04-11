@@ -1,0 +1,12 @@
+
+;<Without Overlap>
+MVI C,04
+LXI H,3000
+LXI D,3006
+LOOP: MOV A,M
+STAX D
+INX H
+INX D
+DCR C
+JNZ LOOP
+HLT
